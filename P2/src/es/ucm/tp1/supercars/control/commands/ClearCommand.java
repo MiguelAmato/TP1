@@ -1,0 +1,20 @@
+package es.ucm.tp1.supercars.control.commands;
+
+import es.ucm.tp1.supercars.logic.Game;
+
+public class ClearCommand extends Command{
+
+	private static final String NAME = "Clear";
+	private static final String DETAILS = "Clear [0]";
+	private static final String SHORTCUT = "0";
+	private static final String HELP = "Clears the road";
+	
+	public ClearCommand() {
+		super(NAME, SHORTCUT, DETAILS, HELP);
+	}
+
+	public boolean execute(Game game) {
+		game.clear();
+		return true;
+	}	
+}
